@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              android:orientation="horizontal"
+              android:layout_marginTop="5dp"
+              android:layout_height="wrap_content">
+
+
+    <ImageView android:layout_width="169dp" android:layout_height="195dp"
+               android:background="@drawable/ic_launcher_background"
+               android:id="@+id/poster"
+               android:layout_gravity="center"
+    />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="vertical"
+    >
+        <TextView android:layout_width="224dp" android:layout_height="38dp"
+                  android:text="Movie Title"
+                  android:textSize="20dp"
+                  android:id="@+id/movietitle"
+                  android:textColor="#881B1247"
+                  android:textStyle="bold"
+                  android:gravity="center"
+        />
+        <TextView android:layout_width="224dp" android:layout_height="38dp"
+                  android:textStyle="bold"
+                  android:id="@+id/hindi"
+                  android:textColor="#1C2C53"
+                  android:textSize="19dp"
+                  android:text="Title Hindi"
+                  android:gravity="center"
+        />
+        <TextView android:layout_width="230dp" android:layout_height="38dp"
+                  android:textStyle="bold"
+                  android:id="@+id/rate"
+                  android:textColor="#1C2C53"
+                  android:textSize="19dp"
+                  android:text="popularity"
+                  android:gravity="center"
+        />
+        <android.support.v7.widget.CardView android:layout_width="226dp" android:layout_height="100dp"
+                                            app:cardCornerRadius="15dp"
+                                            app:cardBackgroundColor="#CBCBDF"
+                                            app:cardElevation="10dp"
+                                            android:textColor="#1C2C53"
+                                            android:gravity="center">
+            <TextView android:layout_width="match_parent" android:layout_height="90dp"
+                      android:id="@+id/textoverview"
+                      android:layout_gravity="center"
+                      android:textStyle="bold"
+                      android:text="overview"
+                      android:textSize="19dp"
+                      android:gravity="center"
+            />
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</LinearLayout>
