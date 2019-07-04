@@ -24,25 +24,18 @@ class MovieAdapter(val context: Context, val list: ArrayList<ResultsItem>) :
     override fun onBindViewHolder(p0: MovieHolder, p1: Int) {
         val current = list[p1]
         try {
-
-
             with(p0.itemView) {
-
-                movietitle.text = current.title?.toString()
-                hindi.text = current.originalTitle?.toString()
-//            Log.e("TAG", current.originalTitle)
-//            Log.e("TAG", current.overview.toString())
+                movietitle.text = current.title.toString()
+                hindi.text = current.originalTitle.toString()
                 rate.text = current.popularity.toString()
                 textoverview.text = current.overview.toString()
-                Picasso.get().load(current.posterPath).into(poster)
+                Picasso.get().load(current.backdropPath).placeholder(R.drawable.ic_photo_black_24dp).into(poster)
             }
         }catch ( ex : Exception){
             ex.printStackTrace()
         }
-
     }
     class MovieHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
     }
 
 

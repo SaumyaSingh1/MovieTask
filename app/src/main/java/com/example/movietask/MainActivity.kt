@@ -13,16 +13,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
         val fragmentlist = arrayListOf<Fragment>()
         fragmentlist.add(TopRatedfragment())
         fragmentlist.add(LatestMovieFragment())
 
         val pagerAdapter = PagerAdapter(fragmentlist, supportFragmentManager)
-
-        viewpager.adapter = com.example.movietask.PagerAdapter(fragmentlist, supportFragmentManager)
-          tablayout.setupWithViewPager(viewpager)
+        viewpager.adapter =pagerAdapter
+        tablayout.setupWithViewPager(viewpager)
 
     }
 }
